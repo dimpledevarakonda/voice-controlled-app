@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice-Controlled Note-Taking App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Voice-Controlled Note-Taking App</h1>
+        <div class="buttons">
+            <button id="start-recording" class="btn start">Start Recording</button>
+            <button id="stop-recording" class="btn stop">Stop Recording</button>
+        </div>
+        <textarea id="note-text" placeholder="Your note will appear here..."></textarea>
+        <div class="category">
+            <input type="text" id="category-input" placeholder="Enter category" />
+            <button id="add-category" class="btn">Add Category</button>
+        </div>
+        <div class="category-select">
+            <select id="category-select">
+                <option value="" disabled selected>Select category</option>
+            </select>
+        </div>
+        <button id="save-note" class="btn save">Save Note</button>
+        <button id="download-text" class="btn download">Download Notes by Category</button>
+        <div id="notes-container">
+            <h2>Notes</h2>
+            <div id="filter-container">
+                <label for="filter-category">Filter by category:</label>
+                <select id="filter-category">
+                    <option value="" selected>All</option>
+                </select>
+            </div>
+            <ul id="notes-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
